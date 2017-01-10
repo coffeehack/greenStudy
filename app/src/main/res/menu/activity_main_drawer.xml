@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/save"
+            android:icon="@drawable/ic_get_app_black_24dp"
+            android:title="Save" />
+        <item
+            android:id="@+id/night_mode"
+            android:icon="@drawable/ic_brightness_4_black_24dp"
+            android:title="night mode" />
+        <item
+            android:id="@+id/help"
+            android:icon="@drawable/ic_help_outline_black_24dp"
+            android:title="help" />
+    </group>
+
+    <item android:title="About us">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Share" />
+            <item
+                android:id="@+id/visit_us"
+                android:icon="@drawable/ic_public_black_24dp"
+                android:title="Visitus" />
+
+        </menu>
+    </item>
+
+</menu>
