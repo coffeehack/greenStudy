@@ -23,8 +23,8 @@ public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
 
-
-    ListView    listView;
+    javaAdapter adapter;
+    ListView listView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,19 +56,35 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
 
-        ArrayList<Cases> cases= new ArrayList<Cases>();
-        cases.add(new Cases("bhopal"));
-        cases.add(new Cases("bhopal"));
-        cases.add(new Cases("bhopal"));
-        cases.add(new Cases("bhopal"));
-        cases.add(new Cases("bhopal"));
-        javaAdapter   adapter = new javaAdapter(this,cases);
+        FeedFetcher feedFetcher = new FeedFetcher(this);
+
+
+        final ArrayList<Cases> cases=feedFetcher.getdata1();
+
+//        cases.add(new Cases("Scientists Have Finally Figured Out the Mysterious 'Missing Element' in Earth's Core","The team was able to reach their findings by actually creating virtual Earth models in laboratories and exposing these to real-life conditions including heat and pressure.","http://www.natureworldnews.com/articles/35000/20170112/scientists-finally-figured-out-mysterious-missing-element-earths-core.htm"));
+//        cases.add(new Cases("Plants May Be Able to See, Scientists Discover","The team was able to reach their findings by actually creating virtual Earth models in laboratories and exposing these to real-life conditions including heat and pressure.","http://www.natureworldnews.com/articles/35000/20170112/scientists-finally-figured-out-mysterious-missing-element-earths-core.htm"));
+
+
+       if(cases!=null) {
+           adapter = new javaAdapter(this, cases);
+       }
+        else{
+
+       }
         listView= (ListView) findViewById(R.id.list);
         listView.setAdapter(adapter);
         listView.setOnItemClickListener(new  AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position,long id) {
-                Toast.makeText(MainActivity.this, "List View row Clicked at"+position,Toast.LENGTH_SHORT).show();
+//                Toast.makeText(MainActivity.this, "List View row Clicked at"+position,Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(MainActivity.this,CaseDisp.class);
+
+                Bundle b3 = new Bundle();
+                b3.putString("title",cases.get(position).gettitle());
+                b3.putString("disp",cases.get(position).getCaseDiscription());
+                b3.putString("link",cases.get(position).getCaseLink());
+                intent.putExtras(b3);
+                startActivity(intent);
             }
         });
 
