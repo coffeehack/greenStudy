@@ -17,6 +17,8 @@
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
+
+            app:title="@string/app_name"
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"
             app:popupTheme="@style/AppTheme.PopupOverlay"
@@ -31,7 +33,9 @@
         android:layout_height="69dp"
         android:layout_gravity="top|left"
         android:layout_margin="@dimen/fab_margin"
-        app:srcCompat="@android:drawable/ic_input_add"
+        app:fabSize="normal"
+        app:srcCompat="@android:drawable/ic_menu_save"
+        android:tint="#000"
         app:layout_anchor="@+id/include"
         app:layout_anchorGravity="bottom|right" />
 
