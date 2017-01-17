@@ -3,6 +3,7 @@ package com.example.android.greenstudy;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -20,6 +21,7 @@ import android.view.MenuItem;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
+
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
@@ -44,7 +46,9 @@ public class MainActivity extends AppCompatActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_main);
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -147,15 +151,20 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.save) {
-            // Handle the camera action
-        } else if (id == R.id.night_mode) {
+       if (id == R.id.help) {
 
-        } else if (id == R.id.help) {
+Intent i=new Intent(MainActivity.this,help.class);
+           startActivity(i);
 
         } else if (id == R.id.visit_us) {
+           Uri uri=Uri.parse("https://github.com/coffeehack/greenStudy");
+           Intent browserIntent = new Intent(Intent.ACTION_VIEW, uri);
+           startActivity(browserIntent);
 
         } else if (id == R.id.nav_share) {
+           Uri uri=Uri.parse("https://drive.google.com/file/d/0B4-8lOBla6rlVGdZUHZ5WFVkSk0/view?usp=drivesdk");
+           Intent browserIntent = new Intent(Intent.ACTION_VIEW, uri);
+           startActivity(browserIntent);
 
         }
 
