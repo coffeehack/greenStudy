@@ -1,10 +1,12 @@
 package com.example.android.greenstudy;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -28,7 +30,24 @@ public class SavedCaseDisp extends AppCompatActivity {
             mdisp.setText(disp);
 
         }
+
+        final Button button = (Button) findViewById(R.id.button1);
+
+        button.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                Uri uri=Uri.parse(link);
+                Intent browserIntent = new Intent(Intent.ACTION_VIEW, uri);
+                startActivity(browserIntent);
+
+            }
+
+
+        });
+
     }
+
     DataBaseHandler dataBaseHandler = new DataBaseHandler(this,null,null,1);
     public void deleteCase(View view){
         dataBaseHandler.deleteCase(title);
