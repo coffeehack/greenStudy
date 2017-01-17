@@ -7,6 +7,16 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     tools:openDrawer="start">
+    <TextView
+        android:text="No Internet Connection"
+        android:fontFamily="sans-serif-condensed"
+        android:textColor="#000"
+        android:textSize="24dp"
+        android:id="@+id/emptyview"
+        android:gravity="center"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
     <include
         layout="@layout/app_bar_main"

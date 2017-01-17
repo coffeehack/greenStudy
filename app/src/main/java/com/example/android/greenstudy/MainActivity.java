@@ -77,7 +77,6 @@ public class MainActivity extends AppCompatActivity
         feedFetcher.execute();
         feedFetcher.progressDialog.show();
 
-
 //
 //
 
@@ -94,6 +93,8 @@ public class MainActivity extends AppCompatActivity
 
         listView= (ListView) findViewById(R.id.list);
         listView.setAdapter(adapter);
+        listView.setEmptyView(findViewById(R.id.emptyview));
+
         listView.setOnItemClickListener(new  AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position,long id) {
@@ -108,6 +109,7 @@ public class MainActivity extends AppCompatActivity
                 startActivity(intent);
             }
         });
+
 
 
     }
