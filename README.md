@@ -1,20 +1,20 @@
 # Green Study
 
 ----
-## What is Green Study?
+# What is Green Study?
 
 
 > An app that can fetch  enviroment news and can save them in app as well.
 
 ----
-## To Save an news
-1. open news by selecting news in list.
-2. press yellow  fab download button for downloading.
-3. press back and view the saved list for viewing saved news
+# To Save an news
+1. open news by selecting news in list.<br>
+2. press yellow  fab download button for downloading.<br>
+3. press back and view the saved list for viewing saved news<br>
 
 ----
-## Want to contribute?
-> open issue for new feature.
-> Add proper description of feature.
-> Add screenshots of new features].
+# Want to contribute?
+> open issue for new feature.<br>
+> Add proper description of feature.<br>
+> Add screenshots of new features].1<br>
 
