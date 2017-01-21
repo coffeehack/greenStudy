@@ -15,4 +15,5 @@
 > Add screenshots of new features.<br>
 
 # download the app
-> [download](https://drive.google.com/file/d/0B4-8lOBla6rlNERQTzRZMy16R28/view?usp=drivesdk)
+> [download for lollipop and higher](https://drive.google.com/file/d/0B4-8lOBla6rlNERQTzRZMy16R28/view?usp=drivesdk)
+>[download for kitkat and higher](https://drive.google.com/open?id=0B4-8lOBla6rlblZuSW9ILWdYbDg)
