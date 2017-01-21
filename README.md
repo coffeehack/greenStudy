@@ -4,7 +4,7 @@
 
 > An app that can fetch  enviroment news and can save them in app as well.
 
-# To Save an news
+# To Save  news
 1. open news by selecting news in list.<br>
 2. press yellow  fab download button for downloading.<br>
 3. press back and view the saved list for viewing saved news<br>
