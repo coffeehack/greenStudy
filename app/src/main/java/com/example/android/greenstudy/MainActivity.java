@@ -154,17 +154,18 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
        if (id == R.id.help) {
+           Uri uri=Uri.parse("https://coffeehack.github.io/greenStudy/");
+           Intent browserIntent = new Intent(Intent.ACTION_VIEW, uri);
+           startActivity(browserIntent);
 
-Intent i=new Intent(MainActivity.this,help.class);
-           startActivity(i);
 
         } else if (id == R.id.visit_us) {
-           Uri uri=Uri.parse("https://github.com/coffeehack/greenStudy");
+           Uri uri=Uri.parse("https://coffeehack.github.io/greenStudy/");
            Intent browserIntent = new Intent(Intent.ACTION_VIEW, uri);
            startActivity(browserIntent);
 
         } else if (id == R.id.nav_share) {
-           Uri uri=Uri.parse("https://drive.google.com/file/d/0B4-8lOBla6rlVGdZUHZ5WFVkSk0/view?usp=drivesdk");
+           Uri uri=Uri.parse("https://drive.google.com/file/d/0B4-8lOBla6rlNERQTzRZMy16R28/view?usp=drivesdk");
            Intent browserIntent = new Intent(Intent.ACTION_VIEW, uri);
            startActivity(browserIntent);
 

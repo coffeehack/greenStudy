@@ -24,7 +24,6 @@
         <activity android:name=".CaseDisp" />
         <activity android:name=".savedCases" />
         <activity android:name=".SavedCaseDisp" />
-        <activity android:name=".help"></activity>
     </application>
 
 </manifest>
