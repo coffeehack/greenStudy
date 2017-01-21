@@ -1,5 +1,3 @@
-# Green Study
-
 
 # What is Green Study?
 
